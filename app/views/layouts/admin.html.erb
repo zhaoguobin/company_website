@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>后台管理</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= render 'layouts/admin/iefix' %>
+  <%= stylesheet_link_tag    'admin/admin', 'normal', media: 'all' %>
+  <%= javascript_include_tag 'admin/admin' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render 'layouts/admin/header' %>
+
+  <div class="container_fluid">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <%= render 'layouts/admin/sidebar' %>
+      </div>
+      <div class="col-md-9 main">
+        <%= breadcrumbs :style => :bootstrap %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

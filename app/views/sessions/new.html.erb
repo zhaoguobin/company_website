@@ -1,0 +1,32 @@
+
+<div>
+
+  <%= form_tag sessions_path, :id => "new_session", :class => "ym-form linearize-form ym-columnar mh-500 tc", :method => :post do %>
+
+    <div id="form_area">
+      <h3 class="tc ptb-20">登录</h3>
+
+      <% if flash[:error].present? %>
+        <p id="flash_box" class="box error"><%= flash[:error] %></p>
+      <% end %>
+
+      <div aria-live="assertive" role="alert" id="login_area" class="ym-fbox ym-fbox-text">
+        <label for="login">用户名 <sup title="用户名不能为空！" class="ym-required">*</sup></label>
+        <input type="text" aria-required="true" size="50" id="login" name="login">
+        <p class="ym-message">用户名不能为空！</p>
+      </div>
+
+      <div aria-live="assertive" role="alert" id="password_area" class="ym-fbox ym-fbox-text">
+        <label for="password">密码 <sup title="密码不能为空！" class="ym-required">*</sup></label>
+        <input type="password" aria-required="true" size="50" id="password" name="password">
+        <p class="ym-message">密码不能为空！</p>
+      </div>
+
+      <div class="ym-fbox-footer ym-fbox-button">
+        <input type="submit" id="submit" class="save ym-primary" value="登录">
+      </div>
+    </div>
+
+  <% end %>
+
+</div>

@@ -1,0 +1,30 @@
+
+.dashed {
+  border-bottom: 1px dashed rgb(204, 204, 204);
+}
+
+.double_dashed {
+  border-top: 1px dashed rgb(204, 204, 204);
+  border-bottom: 1px dashed rgb(204, 204, 204);
+}
+
+.tc {
+  text-align: center;
+}
+
+.ptb-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*************************
+ *
+ *    page show
+ *
+ *************************/
+
+#news_date {
+  padding: 10px 0 10px 0;
+  margin-bottom: 20px;
+  color: #666666;
+}

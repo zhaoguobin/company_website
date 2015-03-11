@@ -1,0 +1,73 @@
+
+<section id="top_images" class="bordered">
+  <div id="slider_images">
+    <% @index_images.each do |image| %>
+      <%= link_to image.link do %>
+        <%= image_tag image.photo_url %>
+      <% end %>
+    <% end %>
+  </div>
+</section>
+
+<section id="middle_informations" class="pd-top">
+  <div class="ym-grid ym-equalize">
+    <div class="ym-g50 ym-gl">
+      <div class="ym-gbox-left" id="company_introduction">
+        <div class="blue_solid">
+          <div class="ym-grid ym-equalize">
+            <div class="ym-g75 ym-gl section_title">企业简介</div>
+            <div class="ym-g25 ym-gr tr section_more"><%= link_to "更多", category_page_path(@information_category, @information) %></div>
+          </div>
+        </div>
+        <div>
+          <%= truncate_html @information.content, :length => 200 %>
+        </div>
+      </div>
+    </div>
+    <div class="ym-g50 ym-gr">
+      <div class="ym-gbox-left">
+        <div class="blue_solid">
+          <div class="ym-grid ym-equalize">
+            <div class="ym-g75 ym-gl section_title">业界新闻</div>
+            <div class="ym-g25 ym-gr tr section_more"><%= link_to "更多", category_pages_path(@news_category) %></div>
+          </div>
+        </div>
+
+        <div>
+          <ul id="news_list">
+            <% @news.each do |page| %>
+              <li class="dashed no-margin ptb-3 no-padding">
+                <div class="ym-grid">
+                  <div class="ym-g75 ym-gl">
+                    <%= link_to truncate(page.title, :length => 20), category_page_path(@news_category, page) %>
+                  </div>
+                  <div class="ym-g25 ym-gr tr">
+                    <%= short_date page.created_at %>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bottom_products" class="pd-top">
+  <div class="blue_solid">
+    <div class="ym-grid ym-equalize">
+      <div class="ym-g75 ym-gl section_title">产品展示</div>
+      <div class="ym-g25 ym-gr tr section_more"><%= link_to "更多", category_pages_path(@products_category) %></div>
+    </div>
+  </div>
+  <div id="products_show">
+    <% @products.each do |product| %>
+      <div class="product_image">
+        <%= link_to category_page_path(@products_category, product), :class => 'product_image' do %>
+          <%= image_tag product.photo_url(:thumb), :class => 'bordered no-padding no-margin' %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>

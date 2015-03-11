@@ -1,0 +1,9 @@
+<ul class="nav nav-sidebar">
+  <li><%= link_to "首页", admin_root_path %></li>
+  <li><%= link_to "网站设置", admin_settings_path %></li>
+  <li><%= link_to "用户管理", admin_users_path %></li>
+  <li><%= link_to "网站结构", manage_admin_categories_path %></li>
+  <% @roots.each do |root| %>
+    <li><%= link_to root.name, admin_category_path(root) %></li>
+  <% end %>
+</ul>

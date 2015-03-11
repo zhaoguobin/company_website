@@ -1,0 +1,34 @@
+<table class="table table-hover table-condensed table-bordered">
+  <thead>
+    <tr>
+      <th><%= sort_link(@q, :id, "ID") %></th>
+      <th><%= sort_link(@q, :title, "标题") %></th>
+      <th>图片</th>
+      <th><%= sort_link(@q, :created_at, "创建时间") %></th>
+      <th><%= link_to "新建产品", new_admin_category_page_path(@category), :class => "btn btn-success" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= page.id %></td>
+        <td><%= link_to page.title, admin_category_page_path(@category, page) %></td>
+        <td><%= image_tag page.photo_url(:mini) if page.photo.present? %></td>
+        <td><%= short_datetime page.created_at %></td>
+        <td>
+          <%= link_to edit_admin_category_page_path(@category, page) do %>
+            <i class="fa fa-edit"></i> 修改产品
+          <% end %>
+          <%= link_to admin_category_page_path(@category, page), :method => :delete, :class => 'delete', :'data-confirm' => "确定要删除？" do %>
+            <i class="fa fa-times"></i> 删除产品
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    <% if @pages.blank? %>
+      <tr>
+        <td colspan='5' class="not_found">未找到</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

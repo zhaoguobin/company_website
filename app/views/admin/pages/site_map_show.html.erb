@@ -1,0 +1,9 @@
+<% breadcrumb :show_category, @category %>
+
+<div class="page-header">
+  <h3><%= @category.name %></h3>
+</div>
+
+<%= render 'tab' %>
+
+<%= render "/pages/#{@category.type_name}_show" %>

@@ -1,0 +1,15 @@
+
+<ul id="news_list">
+  <% @pages.each do |page| %>
+    <li class="dashed no-margin ptb-10">
+      <div class="ym-grid">
+        <div class="ym-g75 ym-gl">
+          <%= link_to page.title, category_page_path(@category, page) %>
+        </div>
+        <div class="ym-g25 ym-gr tr">
+          <%= short_date page.created_at %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

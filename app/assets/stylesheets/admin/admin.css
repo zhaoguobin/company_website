@@ -1,0 +1,42 @@
+/*
+ *= require_self
+ *= require spacelab/loader
+ *= require spacelab/bootswatch
+ *= require fontawesome
+ *= require tree
+ *= require sortable_tree
+ *= require nested_options
+*/
+
+abbr[title=required] {
+  color: red;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.page-header a {
+  margin-top: 15px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px !important;
+}
+
+.not_found {
+  text-align: center;
+  font-style: italic;
+}
+
+.delete, a.delete:hover, a.delete:focus {
+  color: red;
+}
+
+td, th {
+  vertical-align: middle !important;
+}
+
+.ui-sortable-handle {
+  cursor: move;
+}

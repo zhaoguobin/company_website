@@ -1,0 +1,323 @@
+
+/***********************
+ *
+ *      全局
+ *
+ ***********************/
+
+.blue_solid {
+  border-bottom: 3px solid #2388e1;
+  padding: 6px 10px; 
+  margin-bottom: 10px;
+}
+
+.tr {
+  text-align: right;
+}
+
+.mh-500 {
+  min-height: 500px;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.ptb-3 {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.ptb-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+
+/***********************
+ *
+ *       布局
+ *
+ ***********************/
+
+#header {
+  background-image: image-url("header.png");
+}
+
+#header h1 {
+  margin: 0;
+}
+
+#header h1 a {
+  color: white;
+}
+
+#header h1 a:hover, #header h1 a:focus {
+  color: #fff000;
+  background: none;
+}
+
+#header h1 a img {
+  vertical-align: middle;
+}
+
+#nav {
+  background-image: image-url("nav.jpg");
+}
+
+.ym-hlist {
+  background: none;
+}
+
+.ym-hlist ul li {
+  padding: 0 15px 0 15px;
+}
+
+.ym-hlist ul li.active a, .ym-hlist ul li a:focus, .ym-hlist ul li a:hover, .ym-hlist ul li a:active {
+  color: #fff000;
+}
+
+.ym-hlist ul li a, .ym-hlist ul li strong {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+}
+
+.ym-searchform {
+  line-height: 2.4;
+}
+
+#main {
+  background-color: #d9e8f8;
+}
+
+#main .ym-wbox {
+  background-color: white;
+}
+
+#main a:hover, #main a:focus {
+  color: black;
+}
+
+#footer {
+  background-color: #bcd4e7;
+}
+
+/***********************
+ *
+ *       首页   
+ *
+ ***********************/
+
+#top_images {
+  height: 390px;
+  width: 100%;
+}
+
+#img_slider {
+  text-align: center;
+}
+
+#img_slider img {
+  width: 100%;
+}
+
+.pd-top {
+  padding-top: 1.5em;
+}
+
+#middle_informations .ym-gbox-left {
+  padding-right: 0;
+}
+
+#company_introduction {
+  padding-right: 1.5em !important;
+}
+
+.section_title {
+  color: #2388e1;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Droid Sans",Arial,Helvetica,sans-serif;
+}
+
+.section_more {
+  vertical-align: bottom !important;
+  font-family: "Droid Sans",Arial,Helvetica,sans-serif;
+}
+
+a.product_image {
+  display: inline-block;
+  padding: 3px;
+}
+
+a.product_image:hover, a.product_item:hover {
+  background-color: #d9e8f8;
+}
+
+/*************************
+ *
+ *    products list
+ *
+ *************************/
+
+.ym-col1 { width: 33%; margin: 0; text-align: center;} /* left column */
+.ym-col2 { width: 33%; float:left; margin: 0; text-align: center;} /* center column */
+.ym-col3 { margin-left: 67%; margin-right: 0%; text-align: center;} /* right column */
+
+a.product_item {
+  display: block;
+  text-align: center;
+  padding: 25px;
+}
+
+.product_list_thumb {
+  display: block;
+}
+
+.product_list_name {
+  display: block;
+}
+
+
+/**************************
+ *
+ *      news list
+ *
+ **************************/
+
+#news_list li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#news_list a {
+  color: black;
+}
+
+/*************************
+ *
+ *       pagination
+ *
+ *************************/
+
+.pagination {
+  margin: 20px 0;
+  text-align: right;
+}
+
+.pagination ul {
+  display: inline-block;
+  *display: inline;
+  margin-bottom: 0;
+  margin-left: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  *zoom: 1;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.pagination ul > li {
+  display: inline;
+  margin: 0 !important;
+}
+
+.pagination ul > li > a,
+.pagination ul > li > span {
+  float: left;
+  padding: 4px 12px;
+  line-height: 20px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-left-width: 0;
+}
+
+.pagination ul > li > a:hover,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  background-color: #f5f5f5;
+}
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  color: #999999;
+  cursor: default;
+}
+
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover {
+  color: #999999;
+  cursor: default;
+  background-color: transparent;
+}
+
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+  border-left-width: 1px;
+  -webkit-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+
+.pagination-centered {
+  text-align: center;
+}
+
+.pagination-right {
+  text-align: right;
+}
+
+/****************************
+ *
+ *        login in
+ *
+ ****************************/
+
+#new_session {
+  padding: 100px 30px;
+}
+
+#form_area {
+  width: 300px;
+  margin: auto;
+  border: 1px solid #ccc;
+}
+
+.ym-message {
+  display: none !important;
+}
+
+.ym-error .ym-message {
+  display: block !important;
+}
+
+#flash_box {
+  margin: 0 10px;
+  padding: 0.5em;
+}

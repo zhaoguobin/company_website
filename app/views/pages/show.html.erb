@@ -1,0 +1,14 @@
+<%= render "top_image" %>
+<section class="pd-top">
+  <div class="blue_solid">
+    <div class="ym-grid ym-equalize">
+      <div class="ym-g75 ym-gl section_title"><%= @category.name %></div>
+      <% if @category.is_list? %>
+        <div class="ym-g25 ym-gr tr section_more"><%= link_to "返回列表", category_pages_path(@category) %></div>
+      <% end %>
+    </div>
+  </div>
+  <div id="information_content" class="mh-500">
+    <%= render "#{@category.type_name}_show" %>
+  </div>
+</section>

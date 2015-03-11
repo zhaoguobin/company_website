@@ -1,0 +1,14 @@
+<%= render "top_image" %>
+<section class="pd-top">
+  <div class="blue_solid">
+    <div class="ym-grid ym-equalize">
+      <div class="ym-g75 ym-gl section_title"><%= @category.name %></div>
+    </div>
+  </div>
+  <div id="information_content" class="mh-500">
+    <%= render "#{@category.type_name}_list" %>
+    <div class="pagination">
+      <%= paginate @pages %>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+
+<ul class="nav nav-tabs margin-bottom-10">
+  <% if @action == :new %>
+    <li role="presentation" class="active"><%= link_to "编辑", "javascript:;" %></li>
+  <% else %>
+    <li role="presentation" class="<%= is_active?(:show) %>"><%= link_to "预览", tab_link_path(:show) %></li>
+    <li role="presentation" class="<%= is_active?(:edit) %>"><%= link_to "编辑", tab_link_path(:edit) %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,15 @@
+
+<% @pages.each_slice(3) do |pages| %>
+  <div class="ym-column">
+    <% pages.each_with_index do |page, index| %>
+      <div class="ym-col<%= index + 1 %>">
+        <div class="ym-cbox">
+          <%= link_to category_page_path(@category, page), :class => "product_item" do %>
+            <span class="product_list_thumb"><%= image_tag page.photo_url(:thumb) %></span>
+            <span class="product_list_name"><%= page.title %></span>
+          <% end if page.present? %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

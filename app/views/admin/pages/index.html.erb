@@ -1,0 +1,28 @@
+
+<% breadcrumb :show_category, @category %>
+
+<div class="page-header">
+  <h3><%= @category.name %></h3>
+</div>
+
+<div class="well well-sm">
+  <%= search_form_for [:admin, @category, @q], :class => "form-inline" do |f| %>
+
+    <div class="form-group">
+      <%= f.label :id_eq, "ID" %>
+      <%= f.search_field :id_eq, :class => "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :title_cont, "标题" %>
+      <%= f.search_field :title_cont, :class => "form-control" %>
+    </div>
+
+    <%= f.submit "搜索", :class => "btn btn-primary" %>
+  <% end %>
+</div>
+
+<div>
+  <%= render "#{@category.type_name}_list" %>
+  <%= paginate @pages %>
+</div>

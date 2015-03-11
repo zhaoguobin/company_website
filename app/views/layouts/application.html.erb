@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= Settings.site_name %></title>
+  <%= stylesheet_link_tag    'application', 'custom', 'normal', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= render 'layouts/iehacks' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <%= render 'layouts/header' %>
+  <%= render 'layouts/nav' %>
+
+  <main id="main">
+    <div class="ym-wrapper">
+      <div class="ym-wbox">
+        <%= yield %>
+      </div>
+    </div>
+  </main>
+
+  <%= render 'layouts/footer' %>
+
+</body>
+</html>
