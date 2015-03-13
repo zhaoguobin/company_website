@@ -37,8 +37,10 @@
       settings:
         site_name: "网站名称"
         copy_right: "网站版权"
-        baidu_js: "百度统计 JS"
         site_logo_file: "Logo"
+        site_description: "网站描述"
+        site_keywords: "网站关键字"
+        baidu_js: "百度统计 JS"
       index_image:
         photo: "图片"
         link: "链接"

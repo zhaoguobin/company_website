@@ -1,0 +1,68 @@
+
+<h3>首页滚动图片</h3>
+<table class="table table-hover table-condensed table-bordered">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>缩略图</td>
+      <td>链接</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody id="index_images_list">
+    <% @index_images.each do |image| %>
+      <tr id="index_<%= image.id %>">
+        <td><%= image.position %></td>
+        <td class="index_image_photo"><%= image_tag image.photo_url(:thumb) if image.photo_url %></td>
+        <td class="index_image_link"><%= link_to image.link, image.link %></td>
+        <td>
+          <%= link_to "javascript:;", :data => {:toggle => "modal", :target => "#edit_index_image", :id => image.id} do %>
+            <i class="fa fa-edit"></i> 修改链接
+          <% end %>
+          <%= link_to admin_setting_path(image), :method => :delete, :class => 'delete', :'data-confirm' => "确定要删除？" do %>
+            <i class="fa fa-times"></i> 删除
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= simple_form_for [:admin, @index_image], :url => admin_settings_path, :method => :post do |f| %>
+  <table class="table table-hover table-condensed table-bordered">
+    <tr>
+      <td><%= f.input :photo, :as => :file %></td>
+      <td><%= f.input :link %></td>
+      <td><%= f.button :submit, :value => "新建" %></td>
+    </tr>
+  </table>
+<% end %>
+
+<div class="modal fade" id="edit_index_image" tabindex="-1" role="dialog" aria-labelledby="edit_label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="edit_label">编辑链接</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for [:admin, @index_image], :url => update_link_admin_setting_path(0), :method => :post, :remote => true do |f| %>
+          <table class="table table-hover table-condensed table-bordered">
+            <tr>
+              <td>缩略图</td>
+              <td id="modal_photo"></td>
+            </tr>
+            <tr>
+              <td>链接</td>
+              <td><%= f.text_field :link, :id => "modal_link" %></td>
+            </tr>
+          </table>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="modal_submit">保存</button>
+      </div>
+    </div>
+  </div>
+</div>

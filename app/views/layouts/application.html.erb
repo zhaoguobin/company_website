@@ -2,6 +2,9 @@
 <html>
 <head>
   <title><%= Settings.site_name %></title>
+  <meta charset="UTF-8">
+  <meta name="description" content="<%= Settings.site_description %>">
+  <meta name="keywords" content="<%= Settings.site_keywords %>">
   <%= stylesheet_link_tag    'application', 'custom', 'normal', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= render 'layouts/iehacks' %>

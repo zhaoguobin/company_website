@@ -4,8 +4,7 @@
   <%= f.input :name %>
   <%= f.input :item_type_id, :collection => Category.types.to_a, :include_blank => false %>
   <%= f.input :photo %>
-
-
+  
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%= f.button :submit, :value => "保存" %>

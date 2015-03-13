@@ -1,0 +1,13 @@
+<h3>搜索引擎</h3>
+<%= simple_form_for [:admin, Settings], :as => :settings, :url => admin_setting_path(0), :method => :put, :html => {:class => "form-horizontal"} do |f| %>
+
+  <%= f.input :site_description %>
+  <%= f.input :site_keywords %>
+  <%= f.input :baidu_js %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.button :submit, :value => "保存" %>
+    </div>
+  </div>
+<% end %>
