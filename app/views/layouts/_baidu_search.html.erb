@@ -1,6 +1,8 @@
 
-<% if Rails.env == "Production" %>
-<script type="text/javascript">
-  <%== Settings.site_search_js %>
-</script>
+<% if Rails.env == "production" %>
+<div class="ym-searchform">
+  <script type="text/javascript">
+    <%== Settings.site_search_js %>
+  </script>
+</div>
 <% end %>
