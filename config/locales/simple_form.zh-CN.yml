@@ -40,6 +40,8 @@
         site_logo_file: "Logo"
         site_description: "网站描述"
         site_keywords: "网站关键字"
+        baidu_validate_meta: "百度网站验证"
+        site_search_js: "站内搜索 JS"
         baidu_js: "百度统计 JS"
       index_image:
         photo: "图片"

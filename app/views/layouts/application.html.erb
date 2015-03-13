@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="description" content="<%= Settings.site_description %>">
   <meta name="keywords" content="<%= Settings.site_keywords %>">
+  <%= render 'layouts/baidu_validate_meta' %>
   <%= stylesheet_link_tag    'application', 'custom', 'normal', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= render 'layouts/iehacks' %>
+  <%= render 'layouts/baidu_js' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
