@@ -20,3 +20,5 @@
 
 # Ignore public assets files
 /public/assets/*
+
+/public/favicon.ico
