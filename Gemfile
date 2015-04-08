@@ -74,7 +74,12 @@ gem 'acts_as_list'
 gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+end
 
 # Use debugger
 gem 'debugger', group: [:development, :test]

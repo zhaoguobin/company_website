@@ -20,5 +20,9 @@
 
 # Ignore public assets files
 /public/assets/*
-
 /public/favicon.ico
+
+# Ignore secret files
+/config/database.yml
+/config/secrets.yml
+/config/deploy/production.rb
